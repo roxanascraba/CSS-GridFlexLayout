@@ -1,0 +1,22 @@
+{
+  "name": "css-gridflexlayout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile" : "sass --watch --no-source-map main.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roxanascraba/CSS-GridFlexLayout.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roxanascraba/CSS-GridFlexLayout/issues"
+  },
+  "homepage": "https://github.com/roxanascraba/CSS-GridFlexLayout#readme",
+  "dependencies": {
+    "sass": "^1.49.0"
+  }
+}
