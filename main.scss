@@ -17,25 +17,40 @@ $ts: all 2s;
     padding: 0;
     box-sizing: border-box;
 }
+
 input {
     font: inherit;
     border: none;
 }
+
 button {
     border: none;
     background-color: initial;
     outline: none; // no focus indication 
 }
+
 ul {
     list-style: none;
 }
+
 a {
     color: inherit; // initially in white color 
     text-decoration: none;
 }
 
-// UTILITY CLASS
+// KEYFRAMES
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+// UTILITY CLASS
 .uItalic {
     font-style: italic;
 }
@@ -338,6 +353,102 @@ a {
 
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 272px 60px 90px 64px 30px 208px;
+
+    &ImgWrapper {
+        position: relative;
+
+        &:nth-child(1) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            animation: fade-in 1s 0.1s backwards; // different delay for each image
+        }
+        &:nth-child(2) {
+            grid-column: 2 / 3;
+            grid-row: 1 / 4;
+            animation: fade-in 1s 0.2s backwards;
+        }
+        &:nth-child(3) {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+            animation: fade-in 1s 0.3s backwards;
+        }
+        &:nth-child(4) {
+            grid-column: 1 / 2;
+            grid-row: 3 / 6;
+            animation: fade-in 1s 0.4s backwards;
+        }
+        &:nth-child(5) {
+            grid-column: 2 / 3;
+            grid-row: 4 / -1; // span all the way until the end =7
+            animation: fade-in 1s 0.5s backwards;
+        }
+        &:nth-child(6) {
+            grid-column: 3 / 4;
+            grid-row: 2 / 5;
+            animation: fade-in 1s 0.6s backwards;
+        }
+        &:nth-child(7) {
+            grid-column: 1 / 2;
+            grid-row: 6 / -1;
+            animation: fade-in 1s 0.7s backwards;
+        }
+        &:nth-child(8) {
+            grid-column: 3 / 4;
+            grid-row: 5 / -1;
+            animation: fade-in 1s 0.8s backwards;
+        }
+    }
+
+    &Img {
+        width: 100%; // 100% from its parent element (ImgWrapper)
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &Comment {
+        background-color: $color-white;
+        font-size: 12px;
+        color: $color-grey-dark;
+        padding: 4px 10px;
+        border-radius: 500px;
+
+        position: absolute; // for placing the Comments on top of images ; + set position:relative to ImgWrapper
+    
+        &--1 {
+            top: 15px;
+            right: 15px;
+        } 
+
+        &--2 {
+            bottom: 15px;
+            right: 15px;
+        }  
+
+        &--3 {
+            top: 15px;
+            left:15px;
+        }
+
+        &--4 {
+            bottom: 15px;
+            left: 15px;
+        }
+    }
+
+    &Icon {
+        color: $color-accent;
+        font-size: 11px;
+    }
+
+    &Number {
+        font-size: 11px;
+        font-weight: 600;
+        margin-right: 2px;
+    }
 }
 
 // STEPS ----------------------
@@ -347,4 +458,44 @@ a {
 
     grid-column: 2 / 3;
     grid-row: 3 / 4;
+
+    display: flex;
+    align-items: center;
+}
+.step {
+    text-align: center;
+    padding: 0 20px;
+
+    &Icon {
+        font-size: 20px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: $color-white;
+        margin-bottom: 17px;
+        line-height: 50px !important;
+
+        &--1 {
+            color: #67B941;
+        }
+        &--2 {
+            color: #38B049;
+        }
+        &--3 {
+            color: #1EA97B;
+        }
+    }
+
+    &Text {
+        color: $color-grey-dark;
+        font-size: 12px;
+        line-height: 1.8;
+    }
+}
+
+.secondHeading {
+    color: #161616;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
