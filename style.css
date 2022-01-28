@@ -26,6 +26,26 @@ a {
   text-decoration: none;
 }
 
+.uItalic {
+  font-style: italic;
+}
+
+.uAccent {
+  color: #2CC695;
+}
+
+.uUnderline {
+  text-decoration: underline;
+}
+
+.uBold {
+  font-weight: 500;
+}
+
+.uBolder {
+  font-weight: 700;
+}
+
 .page {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -56,6 +76,7 @@ a {
   grid-row: 1/2;
   display: flex;
   align-items: center;
+  padding-left: 25px;
 }
 
 .Logo {
@@ -120,6 +141,140 @@ a {
   background-color: #11271F;
   grid-column: 1/2;
   grid-row: 2/4;
+}
+
+.intro {
+  padding: 48px 35px 45px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.introText {
+  color: #EEF3F4;
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+.firstHeading {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0 30px;
+}
+.socialImg {
+  height: 35px;
+  width: 35px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.socialImg:not(:first-child) {
+  margin-left: -8px;
+}
+.socialContainer {
+  margin-left: 10px;
+}
+.socialNumber {
+  font-weight: 500;
+}
+.socialText {
+  font-size: 12px;
+  color: #A9B487;
+  margin-top: -5px;
+}
+
+.auth {
+  padding: 0 35px;
+}
+.authText {
+  color: #A9B487;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 8px;
+}
+.authLink {
+  font-weight: 500;
+  color: #2CC695;
+}
+
+.btn {
+  background-color: #16B47F;
+  padding: 12px 0;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 2s;
+}
+.btn:hover, .btn:focus {
+  background-color: #119267;
+}
+.btnIcon {
+  margin-left: 2px;
+}
+
+.upload {
+  padding: 45px 35px;
+  border-bottom: 1px solid rgbs(#fff, 0.1);
+  color: #A9B487;
+}
+.uploadContainer {
+  background-color: rgba(255, 255, 255, 0.03);
+  height: 330px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s;
+  position: relative;
+  overflow: hidden;
+}
+.uploadContainer:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+.uploadContainer::before {
+  content: "";
+  border: 2px dashed #434747;
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+}
+.uploadIcon {
+  font-size: 23px;
+}
+.uploadText {
+  color: #fff;
+  margin-top: 8px;
+}
+.uploadAlternative {
+  font-size: 12px;
+  margin-top: -2px;
+}
+
+.footer {
+  padding-top: 50px;
+  padding-left: 35px;
+  font-size: 11px;
+  color: rgba(169, 180, 135, 0.6);
+}
+.footerList {
+  display: flex;
+  column-gap: 15px;
+  margin-top: 10px;
+}
+.footerItem:hover {
+  color: #2CC695;
+}
+.copyright {
+  font-size: inherit;
 }
 
 .gallery {
