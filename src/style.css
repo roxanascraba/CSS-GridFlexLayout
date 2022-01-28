@@ -56,9 +56,13 @@ a {
   font-weight: 700;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 .page {
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -71,8 +75,8 @@ a {
 }
 
 .app {
-  width: 1240px;
-  height: 1030px;
+  width: 124rem;
+  height: 103rem;
   background-color: #fff;
   box-shadow: 0 25px 150px rgba(0, 0, 0, 0.65);
   margin: 80px 0;
@@ -118,7 +122,7 @@ a {
   height: 34px;
   width: 405px;
   border-radius: 500px;
-  font-size: 13px;
+  font-size: 1.3rem;
   color: #555A5B;
   padding-left: 20px;
   outline: none;
@@ -131,7 +135,7 @@ a {
   color: #A9B487;
 }
 .searchSubmit {
-  font-size: 15px;
+  font-size: 1.5rem;
   color: #A9B487;
   cursor: pointer;
   transition: all 2s;
