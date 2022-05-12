@@ -1,5 +1,4 @@
-# Deployed on Netlify
+# CSS - Grid Flex layout
 
-The layout can be accessed at  https://css-grid-flex-layout.netlify.app/
-
-Created a nice layout using grid and flex; added SASS (SCSS syntax); responsiveness.
+Created a nice layout using grid and flex; added SASS (SCSS syntax) and responsiveness.
+To see the layout please check the image gridflex_layout.jpg
